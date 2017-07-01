@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quaternion Aerospace</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="/base.css"/>{% if page.stylesheet %}
+	<link rel="stylesheet" href="/{{page.stylesheet}}.css"/>{% endif %}
+</head>
+<body>
+<header class="siteHead">
+	<h1>
+		<a href="/">
+			<img src="/images/logo.png" alt="Quaternion Aerospace"/>
+		</a>
+	</h1>
+	<address>
+		<dl class="compact">
+			<dt class="icon-phone replace">Phone</dt>
+			<dd><a href="tel:17783513647">+1-778-351-3647</a></dd>
+		</dl>
+		<dl class="compact">
+			<dt class="icon-email replace">Email</dt>
+			<dd><a href="mailto:contact@quaternionaerospace.com">contact@quaternionaerospace.com</a></dd>
+		</dl>
+	</address>
+	<nav class="siteNav">
+		<ul>
+			{% include menu_items.html menu=site.data.menus.global indent="			" %}
+			<li>
+				<form>
+					<input type="search" name="q" placeholder="search"/>
+					<button type="submit">Search</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+</header>
+{% if page.hero %}
+<figure class="hero">
+	<img src="/images/hero/{{page.hero}}.png" alt="" />
+</figure>
+{% endif %}{% if page.subMenu %}
+<nav class="subMenu">
+	<ul>
+		{% assign submenu = site.data.menus[page.subMenu]
+		%}{% include menu_items.html menu=submenu indent="		" %}
+	</ul>
+</nav>
+{% endif %}
+<main>
+{{ page.content }}
+</main>
+
+<footer class="siteFoot">
+	<p>Copyright &copy; 2013 Quaternion Aerospace</p>
+</footer>
+
+</body>
+</html>

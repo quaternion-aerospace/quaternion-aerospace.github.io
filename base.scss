@@ -1,0 +1,234 @@
+---
+---
+html {
+	background:
+		#1e2731
+		url(images/page_bg.png)
+		0 0
+		repeat-x;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+	color: #555;
+	font-size: 16px;
+	line-height: 1.125;
+}
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 15px;
+	background-color: white;
+}
+.siteHead {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	margin-bottom: 0.75em;
+}
+.siteHead > h1 {
+	margin-top: 0;
+	margin-right: 15px;
+	flex-shrink: 1;
+
+	img {
+		vertical-align: middle;
+	}
+}
+.siteHead > * {
+	margin-bottom: 15px;
+}
+.siteNav {
+	display: block;
+	width: 100%;
+	clear: left; /* in case flexbox is not supported */
+}
+.siteNav > ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 1em;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+	background-color: #f5f5f5;
+	background-image: linear-gradient(to bottom, white, #ddd);
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.siteNav > ul > li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+.siteNav a {
+	color: inherit;
+	display: block;
+	padding: 0.5em 15px;
+	margin: 0.25em 0;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+.siteNav a:hover,
+.siteNav .current a,
+.siteNav:hover .current a:hover {
+	color: white;
+	background-color: #333;
+	text-decoration: none;
+	border-color: black;
+	background-image: linear-gradient(to top, #333 50%, #555);
+	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+.siteNav:hover .current a {
+	background: transparent;
+	box-shadow: none;
+	color: inherit;
+	border-color: transparent;
+}
+.siteNav li:last-child {
+	margin-left: auto;
+	background-color: #333;
+	background-image: linear-gradient(to top, #333 50%, #555);
+	padding: 0.75em 15px;
+	min-height: 1.125em;
+	border-left: 1px solid black;
+	box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.2);
+	float: right;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+}
+.siteNav button {
+	display: none;
+}
+
+.hero {
+	display: none;
+}
+@media (min-width: 600px) {
+	.hero {
+		display: block;
+		margin: 0.5em;
+	}
+	.hero img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.subMenu {
+	box-sizing: border-box;
+	background-color: #333;
+	font-size: 13px;
+	line-height: 1.6;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.3);
+	background-image: linear-gradient(to bottom, #555, #333 20px);
+	margin-bottom: 15px;
+}
+@media (min-width: 600px) {
+	.subMenu {
+		width: 200px;
+		float: left;
+		margin-bottom: 30px;
+	}
+}
+.subMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.subMenu > ul {
+	padding: 15px 0;
+}
+.subMenu li {
+	margin: 0;
+	padding: 0;
+}
+.subMenu a {
+	display: block;
+	color: #ddd;
+	padding: 0 15px;
+}
+.subMenu ul ul a {
+	padding-left: 30px;
+}
+.subMenu .current > a {
+	background-color: #ddd;
+	background-image: linear-gradient(to bottom, white, #ddd 40%);
+	color: #333;
+	text-decoration: none;
+}
+
+main {
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 15px;
+}
+@media (min-width: 600px) {
+	.subMenu + main {
+		margin-left: 215px;
+	}
+}
+
+.siteFoot {
+	clear: both;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	margin-top: 30px;
+}
+.siteFoot > p {
+	margin: 0;
+}
+
+
+
+
+a {
+	text-decoration: none;
+	color: #2276c2;
+}
+a:hover {
+	text-decoration: underline;
+	color: #00a8ff;
+}
+
+address {
+	font-style: normal;
+}
+figure {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.compact {
+	margin: 0;
+}
+.compact dt,
+.compact dd {
+	display: inline-block;
+	margin: 0;
+}
+[class^='icon-']::before {
+	content: "";
+	display: inline-block;
+	height: 1.125em;
+	width: 1.125em;
+	background: transparent bottom left / contain no-repeat;
+	vertical-align: middle;
+}
+[class^='icon-'].replace {
+	white-space: pre;
+	width: 1.125em;
+	overflow: hidden;
+	color: transparent;
+}
+.icon-phone::before {
+	background-image: url(/images/phone1.jpg);
+}
+.icon-email::before {
+	background-image: url(/images/mail1.jpg);
+}

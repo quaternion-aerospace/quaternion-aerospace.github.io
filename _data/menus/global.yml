@@ -1,0 +1,12 @@
+- page: index.html
+  label: Home
+- page: services.html
+  label: Services
+- page: fleet.html
+  label: Products
+- page: company.html
+  label: Company
+- page: education.html
+  label: Education
+- page: contact.html
+  label: Contact

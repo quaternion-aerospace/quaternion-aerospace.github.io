@@ -1,0 +1,19 @@
+{% for item in include.menu %}{%
+	assign link = site.pages | where: "path", item.page %}{%
+	capture nexti %}{{include.indent}}		{% endcapture %}{%
+	if (page.path == item.page or page.section == item.label) %}{%
+		assign isCurrent = true %}{%
+	else %}{%
+		assign isCurrent = false %}{%
+	endif
+%}{% unless forloop.first %}
+{{include.indent}}{% endunless %}<li{% if isCurrent %} class="current"{% endif %}>
+{{include.indent}}	<a{% unless isCurrent %} href="{{link.url}}"{% endunless %}>{{item.label}}</a>{%
+	if item.submenu	%}
+{{include.indent}}	<ul>
+{{include.indent}}		{% include menu_items.html menu=item.submenu indent=nexti %}
+{{include.indent}}	</ul>{%
+	endif
+%}
+{{include.indent}}</li>{% endfor %}{% unless forloop.last %}
+{% endunless %}

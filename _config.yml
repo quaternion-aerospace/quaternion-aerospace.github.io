@@ -1,0 +1,11 @@
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+permalink: :slug
+defaults:
+  -
+    scope:
+      path: "" #everything
+    values:
+      layout: default

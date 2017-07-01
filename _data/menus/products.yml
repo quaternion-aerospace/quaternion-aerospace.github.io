@@ -1,0 +1,16 @@
+- page: uav.html
+  label: UAV Fleet
+  submenu:
+    - page: uav/qt.html
+      label: Skyáanaa UAV
+    - page: uav/ground-control-stations.html
+      label: Ground Control Stations
+    - page: uav/custom.html
+      label: Custom Platforms
+- page: software.html
+  label: Software
+  submenu:
+    - page: software/telemetry-viewer.html
+      label: Telemetry Viewer
+    - page: software/mdo.html
+      label: MDO Tool
