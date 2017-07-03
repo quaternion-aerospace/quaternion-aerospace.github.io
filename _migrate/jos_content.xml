@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.0.10.14
+- http://www.phpmyadmin.net
+-
+- Host: localhost:3306
+- Generation Time: Jun 13, 2017 at 05:28 PM
+- Server version: 5.6.33
+- PHP Version: 5.4.31
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="quate2_1" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="jos_content">
+                CREATE TABLE `jos_content` (
+                  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+                  `title` varchar(255) NOT NULL DEFAULT '',
+                  `alias` varchar(255) NOT NULL DEFAULT '',
+                  `title_alias` varchar(255) NOT NULL DEFAULT '',
+                  `introtext` mediumtext NOT NULL,
+                  `fulltext` mediumtext NOT NULL,
+                  `state` tinyint(3) NOT NULL DEFAULT '0',
+                  `sectionid` int(10) unsigned NOT NULL DEFAULT '0',
+                  `mask` int(10) unsigned NOT NULL DEFAULT '0',
+                  `catid` int(10) unsigned NOT NULL DEFAULT '0',
+                  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `created_by` int(10) unsigned NOT NULL DEFAULT '0',
+                  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
+                  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `modified_by` int(10) unsigned NOT NULL DEFAULT '0',
+                  `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
+                  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `images` text NOT NULL,
+                  `urls` text NOT NULL,
+                  `attribs` varchar(5120) NOT NULL,
+                  `version` int(10) unsigned NOT NULL DEFAULT '1',
+                  `parentid` int(10) unsigned NOT NULL DEFAULT '0',
+                  `ordering` int(11) NOT NULL DEFAULT '0',
+                  `metakey` text NOT NULL,
+                  `metadesc` text NOT NULL,
+                  `access` int(10) unsigned NOT NULL DEFAULT '0',
+                  `hits` int(10) unsigned NOT NULL DEFAULT '0',
+                  `metadata` text NOT NULL,
+                  `featured` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
+                  `language` char(7) NOT NULL COMMENT 'The language code for the article.',
+                  `xreference` varchar(50) NOT NULL COMMENT 'A reference to enable linkages to external data sets.',
+                  PRIMARY KEY (`id`),
+                  KEY `idx_access` (`access`),
+                  KEY `idx_checkout` (`checked_out`),
+                  KEY `idx_state` (`state`),
+                  KEY `idx_catid` (`catid`),
+                  KEY `idx_createdby` (`created_by`),
+                  KEY `idx_featured_catid` (`featured`,`catid`),
+                  KEY `idx_language` (`language`),
+                  KEY `idx_xreference` (`xreference`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'quate2_1'
+    -->
+    <database name="quate2_1">
+        <!-- Table jos_content -->
+        <table name="jos_content">
+            <column name="id">1</column>
+            <column name="asset_id">33</column>
+            <column name="title">Products Introduction</column>
+            <column name="alias">products-introduction</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	Products&lt;/h5&gt;
+&lt;p&gt;
+	Quaternion offers a range of products including composite UAV airframes, ground control stations and ground support systems such as antenna pointing and launch / recovery systems. Products are available individually to compliment your current solutions or can be integrated into a turnkey, proven Unmanned Autonomous System. Browse through our products to determine which ones best suit your needs.&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 00:01:10</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-19 05:07:16</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 00:01:10</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">15</column>
+            <column name="parentid">0</column>
+            <column name="ordering">8</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">8549</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">2</column>
+            <column name="asset_id">35</column>
+            <column name="title">Services Introduction</column>
+            <column name="alias">services-introduction</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;Consulting Services&lt;/h5&gt;
+&lt;p&gt;Quaternion Aerospace’s team of engineers offers years of experience in design, structural dynamics, aerodynamics, aeroelasticity, multidisciplinary design optimization, wind tunnel models and flight testing.  We maintain a staff of engineers, scientists, and technicians who handle a wide range of design, manufacturing, testing and evaluation projects.  Past and present projects involve aeroelastic scaling of a joined-wing aircraft configuration; finite element modeling, analysis and validation of a “Turbo Otter” forward fuselage certification; design and feasibility analysis of an airborne measurement of an induced polarization device; topology optimization of an optical table; modeling and analysis of a helicopter bracket assembly; aero-structural optimization of a wing with morphing winglets, rapid prototyping and testing, and product design analysis.&lt;/p&gt;
+&lt;h6&gt;Design&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;UAV Systems&lt;/li&gt;
+&lt;li&gt;Auto-Pilots&lt;/li&gt;
+&lt;li&gt;Stress Analysis&lt;/li&gt;
+&lt;li&gt;Structural Dynamics&lt;/li&gt;
+&lt;li&gt;Aerodynamics&lt;/li&gt;
+&lt;li&gt;Aeroelasticity&lt;/li&gt;
+&lt;li&gt;Optimization&lt;/li&gt;
+&lt;li&gt;Certification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;Build&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Low-Cost Models&lt;/li&gt;
+&lt;li&gt;Custom UAVs&lt;/li&gt;
+&lt;li&gt;CNC Tooling &amp;amp; Machining&lt;/li&gt;
+&lt;li&gt;Advanced Composites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;Test&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Ground Vibration Tests&lt;/li&gt;
+&lt;li&gt;Wind-Tunnel Tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;Fly&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Unmanned Aerial Vehicles (UAVs)&lt;/li&gt;
+&lt;li&gt;Turnkey Leasing Contracts&lt;/li&gt;
+&lt;li&gt;Custom Ground Stations&lt;/li&gt;
+&lt;li&gt;Training&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">8</column>
+            <column name="created">2011-01-14 00:18:27</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2014-06-18 19:51:08</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 00:18:27</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">15</column>
+            <column name="parentid">0</column>
+            <column name="ordering">4</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">12081</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">3</column>
+            <column name="asset_id">37</column>
+            <column name="title">Education Introduction</column>
+            <column name="alias">education-introduction</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;Quaternion Aerospace Inc. routinely provides our clients with seminars and training opportunities in support of our philosophy of life-long learning. Members of the aerospace design and manufacturing, industrial, technical, and  communities regularly benefit from the education opportunities we offer. All our educational programs are instructed by our experienced and expert engineers and staff. Our advanced courses and seminars cover a variety of topics and clients can customize a specific curriculum to meet their needs. Seminars may also be arranged for conferences, professional societies, and company training programs.&lt;/p&gt;
+&lt;p&gt;Dr. Afzal Suleman, CEO and President, has been a NATO Lecture Series Director on &quot;Structural Health Monitoring of Military Vehicles&quot; and three events were held in Berlin (Germany), Madrid (Spain) and Vancouver (Canada). The next event is scheduled to take place in Bilbao (Spain) on July 3-4, 2015. Also, Dr. Suleman is planning the next NATO Lecture Series on &quot;Unmanned Air Vehicles&quot; to take place in Lisbon, Portugal in 2016.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">9</column>
+            <column name="created">2011-01-14 01:02:12</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-12-01 23:41:50</column>
+            <column name="modified_by">51</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 01:02:12</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">13</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">5019</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">4</column>
+            <column name="asset_id">39</column>
+            <column name="title">Company Introduction</column>
+            <column name="alias">company-introduction</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;Quaternion Aerospace is an R&amp;amp;D SME company focused in the design,  manufacture and operation of energy efficient and novel aircraft designs  for manned and unmanned air systems market.  Our open-ended and  adaptive solutions are ideal for implementing and evaluating strategies  from the simple to the extremely complex designs. We employ a diverse team of professional R&amp;amp;D engineers and support staff who have been empowered to continually create, build and deliver a dynamic range of aircraft design challenges and solutions to the educational and industrial sectors.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Quaternion is also a consulting company to major OEMs. We provide exceptional client service, quality and technical experience with a full suite of aerospace design and manufacturing capabilities with partner companies. Quaternion provides research-based solutions. We understand our customers’ needs. Issues like time to market, budget constraints and product quality are considered and reflected in the products we design and manufacture.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 01:18:21</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-11-27 18:36:43</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 01:18:21</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">10</column>
+            <column name="parentid">0</column>
+            <column name="ordering">14</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">9209</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">5</column>
+            <column name="asset_id">40</column>
+            <column name="title">History</column>
+            <column name="alias">history</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;Our History&lt;/h5&gt;
+&lt;p&gt;Quaternion Aerospace was incorporated in 2006. Quaternion has provided design and consulting services to clients such as Viking Air (B.C.), Vancouver Island Helicopters (B.C.), INCO (Ontario), National Research Council – Hertzberg Institute of Astrophysics (B.C.), in Canada and also to Aeronnova S.A. (Spain) and OGMA (Portugal) in Europe. We continue to build our customer base by providing service with excellence.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Current clients include EMBRAER (Brazil), Rigid Robotics (Canada) and National Research Council (Canada).&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Today the company continues to focus on what we do best: design, modeling and optimization needs with state-of-the-art tools and also by building in-house capabilities such as Aircraft Design and Multidisciplinary Design Optimization Tools and Design, Manufacturing and Flight Testing of Unmanned Air Vehicles.&lt;/p&gt;
+&lt;p&gt;Contact us about your next project.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 02:56:49</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-11-27 18:45:45</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 02:56:49</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">15</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3704</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">6</column>
+            <column name="asset_id">41</column>
+            <column name="title">Advanced Course</column>
+            <column name="alias">advanced-course</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h3&gt;
+	&lt;span style=&quot;color:#0000cd;&quot;&gt;&lt;strong&gt;Short Course: Advanced UAV Design &lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;
+	The goal of the course is to provide aerospace practicizing engineers and technologists with knowledge and experience in the methods of aircraft design. The participants will learn to use computer software to complete an original aircraft design.&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">9</column>
+            <column name="created">2011-01-14 03:15:07</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-03-03 23:13:31</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:15:07</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">16</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">2272</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">40</column>
+            <column name="asset_id">81</column>
+            <column name="title">Search and Rescue</column>
+            <column name="alias">search-rescue</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Manufacturing.png&quot; /&gt;Search and Rescue&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">0</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2012-10-11 20:55:19</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-11 21:07:54</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2012-10-11 20:55:19</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">2</column>
+            <column name="parentid">0</column>
+            <column name="ordering">5</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">0</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">41</column>
+            <column name="asset_id">82</column>
+            <column name="title">Wildlife</column>
+            <column name="alias">sliderwildlife</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/HomepageSlider/slider_wildlife.jpg&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">0</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2011-04-02 19:12:47</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-15 14:20:28</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">54</column>
+            <column name="checked_out_time">2017-06-14 00:19:32</column>
+            <column name="publish_up">2011-04-02 19:12:47</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;0&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">2</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">0</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">7</column>
+            <column name="asset_id">42</column>
+            <column name="title">Build</column>
+            <column name="alias">build</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	Quaternion has the capabilities to prototype and manufacture a wide range of custom UAV aircraft. We have built custom airframes ranging from large novel configurations with take-off weights in excess of 200 lbs, to micro air vehicles weighing in at under 0.5 lb!&lt;/p&gt;
+&lt;p&gt;
+	With acess to partner companies with a full range of CNC machines, including two 3-axis mills (4&amp;rsquo;x8&amp;rsquo; and 6&amp;rsquo;x3&amp;rsquo;), a 5axis vertical milling center and 4 axis CNC hot wire foam cutter, we have the ability to quickly prototype aircraft and associated tooling. Quaternion also fabricates composite airframes using vacuum bagging and vacuum assisted resin transfer molding techniques.&lt;/p&gt;
+&lt;p&gt;
+	Contact us for more information on your prototyping and manufacturing needs and be sure to check out our other services to see how we can &lt;u&gt;Design&lt;/u&gt;, &lt;u&gt;Validate&lt;/u&gt; and &lt;u&gt;Operate&lt;/u&gt; your custom UAV.&lt;/p&gt;
+&lt;p&gt;
+	{becssg}build{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">8</column>
+            <column name="created">2011-01-14 03:18:17</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-02-29 00:10:25</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:18:17</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">11</column>
+            <column name="parentid">0</column>
+            <column name="ordering">3</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1341</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">8</column>
+            <column name="asset_id">43</column>
+            <column name="title">Test</column>
+            <column name="alias">test</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	Quaternion offers many services to validate and test your custom design. Testing is critical early in the design phase to reduce total time to market while producing a robust and reliable platform. Using advanced techniques such as Computational Fluid Dynamics (CFD) and Finite Element Analysis (FEM) within the early stages reduces prototyping costs and time, while allowing advanced optimization techniques to be applied.&lt;/p&gt;
+&lt;p&gt;
+	Physical testing including wind tunnel, truck top testing and ground vibration tests are all services available to quaternions customers. Additionally, we have the capabilities to flight test your vehicle on site or at locations specified by you.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Contact us for more information on testing and validating your custom solution and be sure to check out our other services to see how we can &lt;u&gt;Design&lt;/u&gt;, &lt;u&gt;Build&lt;/u&gt; and &lt;u&gt;Operate&lt;/u&gt; your custom UAV.&lt;/p&gt;
+&lt;p&gt;
+	{becssg}test{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">8</column>
+            <column name="created">2011-01-14 03:27:23</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-23 05:33:54</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:27:23</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">6</column>
+            <column name="parentid">0</column>
+            <column name="ordering">2</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1256</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">9</column>
+            <column name="asset_id">44</column>
+            <column name="title">Design</column>
+            <column name="alias">design</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	One of Quaternion&amp;rsquo;s major strengths is our ability to design and optimize a wide variety of aerospace systems. We have experience in a full range of engineering tasks from aircraft conceptualization and initial sizing, aircraft configuration and layout, structures and design for manufacturing.&lt;/p&gt;
+&lt;p&gt;
+	Our extensive suite of in-house developed tools allows a rapid turnaround bringing your aircraft from concept to reality fast. Automated tools and parametric models allow configurations to be optimized based on customer&amp;rsquo;s mission and payload requirements, and automatic CNC toolpath generation and in-house CNC machines means tooling takes days not weeks.&lt;/p&gt;
+&lt;p&gt;
+	Contact us for more information on your custom design needs and be sure to check out our other services to see how we can &lt;u&gt;Build&lt;/u&gt;, &lt;u&gt;Validate&lt;/u&gt; and &lt;u&gt;Operate&lt;/u&gt; a system specific to your needs.&lt;/p&gt;
+&lt;p&gt;
+	{becssg}design{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">8</column>
+            <column name="created">2011-01-14 03:30:34</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-23 05:07:17</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:30:34</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">6</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3092</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">10</column>
+            <column name="asset_id">45</column>
+            <column name="title">Co-Operative Education</column>
+            <column name="alias">co-operative-education</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;Co-Operative Education&lt;/h5&gt;
+&lt;h6&gt;Internship Program&lt;/h6&gt;
+&lt;p&gt;Quaternion Aerospace cooperative education and internship program attempts to strengthen the link between the academic community and the professional engineering and business world through practical, hands-on experience. Our internship program provides a focused program for the growth and development of students in an engineering business environment. This program represents one of the many ways Quaternion Aerospace encourages the continual education of students and engineers at all levels. With this program, Quaternion Aerospace ultimately seeks to contribute positively to the community as well as to the development of future scientists and engineers.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:36:50</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-01-14 03:38:09</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:36:50</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">3</column>
+            <column name="parentid">0</column>
+            <column name="ordering">16</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1480</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">11</column>
+            <column name="asset_id">46</column>
+            <column name="title">Meet Our Team</column>
+            <column name="alias">team</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h3&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 0.83em;&quot;&gt;Meet Our Team&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Meet the people behind the most innovative Unmanned Aerial Vehicle technologies in the world.&lt;/p&gt;
+&lt;p&gt;{becssg}team{/becssg}&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:39:47</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2014-06-18 20:09:17</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:39:47</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">6</column>
+            <column name="parentid">0</column>
+            <column name="ordering">11</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">6463</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">12</column>
+            <column name="asset_id">47</column>
+            <column name="title">VP Research and Development</column>
+            <column name="alias">vp-rd</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	under construction&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:42:11</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-03-03 23:16:28</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:42:11</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">10</column>
+            <column name="parentid">0</column>
+            <column name="ordering">13</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1503</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">13</column>
+            <column name="asset_id">48</column>
+            <column name="title">VP R&amp;D</column>
+            <column name="alias">vp-operations</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/jenner2.jpg&quot; border=&quot;0&quot; alt=&quot;alt&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jenner Richards - Ph.D, Chief Technology Officer&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 10px 0px 15px; padding: 0px; color: #646464; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px;&quot;&gt;Jenner Richards is a Mechanical Engineer with aerospace experience in both manned and unmanned aircraft design and testing. Previous experience has ranged from the design of an aircraft fuel system for a deHavilland Beaver turboprop conversion, to FE analysis of aircraft structures in support of Transport Canada certification. Technical Lead in the US Air Force/Virginia Tech Sensorcraft project.&lt;/p&gt;
+&lt;p style=&quot;margin: 10px 0px; padding: 0px; font-weight: normal; font-size: 14px; line-height: 14px; font-family: Arial, Helvetica, sans-serif; color: #50555a;&quot;&gt;Email: &lt;a href=&quot;mailto:jenner@quaternionaerospace.com&quot; style=&quot;text-decoration: none; color: #2276c2;&quot;&gt;jenner@quaternionaerospace.com&lt;/a&gt;&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:43:32</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-12-01 23:31:18</column>
+            <column name="modified_by">51</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:43:32</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">17</column>
+            <column name="parentid">0</column>
+            <column name="ordering">10</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">5268</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">14</column>
+            <column name="asset_id">49</column>
+            <column name="title">Airframes and Payload Integrator</column>
+            <column name="alias">airframes-and-payload-integrator</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/Personnel/Ryan-Flagg.JPG&quot; style=&quot;width: 128px; height: 112px; border: 10px solid white; float: right;&quot; /&gt;&lt;/h5&gt;
+&lt;h5&gt;
+	Airframes and Payload Integrator&lt;/h5&gt;
+&lt;p&gt;
+	I received my Advanced Diploma in Mechanical Technology in 2005 and am very happy to be working at Quaternion as a co-op student while I finish my degree.&lt;/p&gt;
+&lt;p&gt;
+	I have been a Marine Engineering Operator for the Canadian Forces Navy Reserves for over eight years now and almost all of my civilian work experience as a technologist has been in the field of Oceanography.&lt;/p&gt;
+&lt;p&gt;
+	Since returning to post secondary education at the University of Victoria I have taken over the position of Team Captain for the UVic AERO (Aerospace Engineering Research Organization) Team and I am excited for the new challenge of applying advanced composites and autonomous systems in the aerospace industry.&lt;/p&gt;
+&lt;h6&gt;
+	Interests and Hobbies&lt;/h6&gt;
+&lt;p&gt;
+	I enjoy training for triathlons and teaching fitness classes as a side duty at my Navy Reserve Unit. I also like to SCUBA dive and stay active in my community by organizing fund raisers for the United Way campaign.&lt;/p&gt;
+&lt;h6&gt;
+	Email&lt;/h6&gt;
+&lt;p&gt;
+	ryan@quaternionaerospace.com&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:46:07</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-04-03 21:22:14</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:46:07</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">7</column>
+            <column name="parentid">0</column>
+            <column name="ordering">12</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1616</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">15</column>
+            <column name="asset_id">50</column>
+            <column name="title">Lead Avionics Technician</column>
+            <column name="alias">lead-avionics-technician</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/Personnel/Willem-Brussow.JPG&quot; style=&quot;width: 128px; height: 112px; border: 10px solid white; float: right;&quot; /&gt;&lt;/h5&gt;
+&lt;h5&gt;
+	Lead Avionics Technician&lt;/h5&gt;
+&lt;p&gt;
+	Willem Brussow has always been&amp;nbsp;fascinated with flight,&amp;nbsp;even since childhood.&amp;nbsp;He recently graduated as a Mechanical Engineering Technologist at Camosun College, after which he joined Quaternion. Willem brings experience from designing and building RC model airplanes , along with his solid engineering background, to help with the production of our aircraft.&lt;/p&gt;
+&lt;h6&gt;
+	Interests and Hobbies&lt;/h6&gt;
+&lt;p&gt;
+	Unmanned aerial vehicles, building and flying RC models, kiteboarding, volunteering with homeless people.&lt;/p&gt;
+&lt;h6&gt;
+	Email&lt;/h6&gt;
+&lt;p&gt;
+	willem@quaternionaerospace.com&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:48:41</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-02-28 01:09:48</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:48:41</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">6</column>
+            <column name="parentid">0</column>
+            <column name="ordering">8</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1529</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">16</column>
+            <column name="asset_id">51</column>
+            <column name="title">Software Development and Marketing</column>
+            <column name="alias">software-development-and-marketing</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/Personnel/Shayan-Rahimi.JPG&quot; style=&quot;width: 128px; height: 112px; border: 10px solid white; float: right;&quot; /&gt;&lt;/h5&gt;
+&lt;h5&gt;
+	Software Development and Marketing&lt;/h5&gt;
+&lt;p&gt;
+	As a Quaternion team member, I have the privilege to experience first hand how engineering challenges are conquered. Working in a supportive environment with highly skilled individuals allows for an atmosphere where new ideas are born to tackle old ways of approaching problems. Autonomous flights, advanced composites, and CNC machinery are what everyone&amp;rsquo;s dreams should entail!&lt;/p&gt;
+&lt;h6&gt;
+	Interests and Hobbies&lt;/h6&gt;
+&lt;p&gt;
+	With an on-going&amp;nbsp;fascination of financial markets, I spend my spare time taking an active role in them. When it&amp;#39;s time to relax and play, you can find me at a tennis court.&lt;/p&gt;
+&lt;h6&gt;
+	Email&lt;/h6&gt;
+&lt;p&gt;
+	shayan@quaternionaerospace.com&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 03:56:08</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-04-03 21:23:32</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 03:56:08</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">6</column>
+            <column name="parentid">0</column>
+            <column name="ordering">9</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1495</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">17</column>
+            <column name="asset_id">52</column>
+            <column name="title">Mechanical Engineering Intern</column>
+            <column name="alias">mechanical-engineering-intern</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/Personnel/Peter-Lu.JPG&quot; style=&quot;float: right; width: 128px; height: 112px; border: 10px solid white;&quot; /&gt;&lt;/h5&gt;
+&lt;h5&gt;
+	Mechanical Engineering Intern&lt;/h5&gt;
+&lt;p&gt;
+	I&amp;#39;m a third year mechanical engineering Co-op student from UVic. My education has helped me to assist the Quaternion team to not only build some great airplanes but also to streamline the production process.&lt;/p&gt;
+&lt;h6&gt;
+	Interests and Hobbies&lt;/h6&gt;
+&lt;p&gt;
+	I enjoy driving cars, playing tennis, and taking photographs.&lt;/p&gt;
+&lt;h6&gt;
+	Email&lt;/h6&gt;
+&lt;p&gt;
+	peter@quaternionaerospace.com&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2011-01-14 04:00:19</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-04-03 21:23:11</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 04:00:19</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">7</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1426</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">18</column>
+            <column name="asset_id">53</column>
+            <column name="title">UAV Solutions</column>
+            <column name="alias">uav-solutions</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;UAV Solutions&lt;/h5&gt;
+&lt;p&gt;Quaternion Aerospace specializes in developing a range of turnkey and custom Unmanned Autonomous Systems. Our product line includes proven and cost effective aerial platforms ideally suited for carrying miniaturized sensor payloads with a small operational footprint. The quaternion engineering team can integrate custom sensor payloads within existing offerings or design custom airframes to suit your needs with a very short turn around.&lt;/p&gt;
+&lt;p&gt;Our systems are rapidly deployable with integrated Ground Control Stations tailored around your specific payload requirements. Turnkey systems are available with the choice of commercial or in-house developed autopilots as well as several pre-configured optical and or thermal gimballed camera payloads.&lt;/p&gt;
+&lt;p&gt;Quaternion specializes in custom prototyping of customer designs. Previous project have included aeroelastically scaled flight test demonstrators and unique Wing In Ground effect (WIG) concepts. Please contact us to discuss your custom UAS needs.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 19:54:56</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-01-14 19:55:35</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 19:54:56</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">3</column>
+            <column name="parentid">0</column>
+            <column name="ordering">4</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">8013</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">19</column>
+            <column name="asset_id">54</column>
+            <column name="title">Skyáanaa Platform</column>
+            <column name="alias">skyaanaa-platform</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h3&gt;Skyaanaa Platform (Currently in Pre-Commercialization Stage)&lt;/h3&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Specifications at a Glace&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;Wing Span 2.93m (115 inches)&lt;/p&gt;
+&lt;p&gt;Wing Area 1.03m&lt;sup&gt;2&lt;/sup&gt; (1585 inches&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;
+&lt;p&gt;Payload Capacity 6.5 kg (14.3 lb)&lt;/p&gt;
+&lt;p&gt;Payload Dimensions 45.7cm (L) x 17.8 cm (H) x 16.5cm (W) or 18”(L)x7”(H)x6.5”(W)&lt;/p&gt;
+&lt;p&gt;Weight (Dry) 6.9kg (15.2 lb)&lt;/p&gt;
+&lt;p&gt;Duration/Range: 4.1hr/~200km&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;Full composite construction&lt;/p&gt;
+&lt;p&gt;Stable high-wing design with 4-stroke gasoline propulsion option&lt;/p&gt;
+&lt;p&gt;Large volume, easily accessible payload bay with internal payload mounting rails&lt;/p&gt;
+&lt;p&gt;Quick assembly with interchangeable surfaces for quick deployment and easy field repairs&lt;/p&gt;
+&lt;p&gt;Stows into a 81” x 22” x 15” case (Optional shock/water/dustproof case available upon request)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We have developed three configurations:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Airframe only&lt;/p&gt;
+&lt;p&gt;- Airframe equipped with servos and engine&lt;/p&gt;
+&lt;p&gt;- Deployable UAS with fully integrated autopilot and GCS&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;The Skyaanaa platform will offer a robust, reliable, cost effective solution for applications including UAV development, surveillance and remote sensing. Skyaanaa will be a stable, high wing platform ideally suited for carrying custom payloads or as an airborne test-bed for experimental flight control schemes, collision avoidance systems etc. The large payload bay will allow for easy accessibility and an integrated rack mount offering flexible mounting options.&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;Following three configurations have been developed for Skyaanaa&lt;/div&gt;
+&lt;h5&gt;Option 1: Airframe only&lt;/h5&gt;
+&lt;p&gt;In this option the UAV will be ready for avionics, engine and servo integration.&lt;/p&gt;
+&lt;!--
+&lt;p&gt;&lt;a class=&quot;hikashop_html_add_to_cart_link&quot; href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=17&quot; _mce_href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=17&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $7,519&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+--&gt;
+&lt;h5&gt;Option 2: Airframe with engine, servos and fuel tanks integrated&lt;/h5&gt;
+&lt;p&gt;In this option the UAV will be almost ready to fly with 4-stroke engine, servos and fuel tank pre-installed.&lt;/p&gt;
+&lt;!--
+&lt;p&gt;&lt;a class=&quot;hikashop_html_add_to_cart_link&quot; href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=18&quot; _mce_href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=18&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $10,249&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+--&gt;
+&lt;h5&gt;Option 3: Flight ready UAS&lt;/h5&gt;
+&lt;p&gt;In the third option the UAV will be flight ready in under an hour with the integrated 4-stroke engine, fuel tanks and servos and Quaternion’s ezAP® Autopilot. The package will include the custom Ground Control Software (Laptop not included). Each system will be test flown and the autopilot tuned and tested for typical usage scenarios. (Other COTS autopilots can be made available upon request)&lt;/p&gt;
+&lt;!--
+&lt;p&gt;&lt;a href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=19&quot; _mce_href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=19&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $17,450&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+--&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;{becssg}qt1{/becssg}&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:11:03</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2014-07-21 00:14:16</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:11:03</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">34</column>
+            <column name="parentid">0</column>
+            <column name="ordering">6</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">6848</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">20</column>
+            <column name="asset_id">55</column>
+            <column name="title">QT2 Platform</column>
+            <column name="alias">qt2-platform</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h3&gt;
+	QT2 Platform&lt;/h3&gt;
+&lt;div class=&quot;note&quot;&gt;
+	Specifications at a Glace&lt;/div&gt;
+&lt;p&gt;
+	Wing Span 3.2m (126inches)&lt;/p&gt;
+&lt;p&gt;
+	Wing Area 1.2m&lt;sup&gt;2&lt;/sup&gt; (1860 inches&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;
+&lt;p&gt;
+	Payload Capacity 5.5kg (12.1 lb)&lt;/p&gt;
+&lt;p&gt;
+	Payload Dimensions 52cm (L) x 16 cm (H) x 16cm (W) or 20.5&amp;rdquo;(L)x6.3&amp;rdquo;(H)x6.3&amp;rdquo;(W)&lt;/p&gt;
+&lt;p&gt;
+	Weight (Dry) 5.8kg (12.8 lb)&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;
+	Features&lt;/div&gt;
+&lt;p&gt;
+	Pusher configuration ideal for forward looking camera payloads&lt;/p&gt;
+&lt;p&gt;
+	Longer endurance platform than QT1 with up to 11hr endurance&lt;/p&gt;
+&lt;p&gt;
+	Full composite construction with stable high-wing design, available as electric and 4-stroke gas propulsion&lt;/p&gt;
+&lt;p&gt;
+	Large volume, easily accessible payload bay with internal payload mounting rails and optional isolated mount for forward facing camera payloads&lt;/p&gt;
+&lt;p&gt;
+	Available as airframe only or as deployable UAS&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;
+	Description&lt;/div&gt;
+&lt;p&gt;
+	The QT2 platform is designed as a remote sensing platform with extended range and endurance. The pusher configuration allows for wide variety of forward facing camera/sensor options. The platform offers a reliable, cost effective solution for applications including UAV development, surveillance and remote sensing.&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;
+	The QT2 is available in three configurations&lt;/div&gt;
+&lt;h5&gt;
+	Option 1: Airflrame only&lt;/h5&gt;
+&lt;p&gt;
+	The QT2 is available as an airframe only and is ready for avionics, engine and servo integration.&lt;/p&gt;
+&lt;!--&lt;p&gt;
+	&lt;a href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=20&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $7,649&quot; /&gt;&lt;/a&gt;&lt;/p&gt;--&gt;
+&lt;h5&gt;
+	Option 2: Airframe with engine, servos and fuel tanks integrated&lt;/h5&gt;
+&lt;p&gt;
+	This option is almost ready to fly with 4-stroke engine, servos and fuel tank pre-installed.&lt;/p&gt;
+&lt;!--&lt;p&gt;
+	&lt;a href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=21&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $10,880&quot; /&gt;&lt;/a&gt;&lt;/p&gt;--&gt;
+&lt;h5&gt;
+	Option 3: Flight ready UAS&lt;/h5&gt;
+&lt;p&gt;
+	This option is flight ready in under an hour with the integrated 4-stroke engine, fuel tanks and servos and the choice of the Quaternion&amp;rsquo;s ezAP&amp;reg; or ezAP-MARINE&amp;reg; Autopilots. The package includes the custom Ground Control Software (Laptop not included) and each system has been test flown and the autopilot tuned and tested for typical usage scenarios. (Other COTS autopilots available upon request)&lt;/p&gt;
+&lt;!--&lt;p&gt;
+	&lt;a href=&quot;http://www.quaternionaerospace.com/index.php?option=com_hikashop&amp;amp;ctrl=product&amp;amp;task=updatecart&amp;amp;quantity=1&amp;amp;checkout=1&amp;amp;product_id=22&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Purchase for $17,990&quot; /&gt;&lt;/a&gt;&lt;/p&gt;--&gt;
+&lt;p&gt;
+	{becssg}qt2{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:17:53</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-01-17 19:18:44</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:17:53</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">24</column>
+            <column name="parentid">0</column>
+            <column name="ordering">7</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1953</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">21</column>
+            <column name="asset_id">56</column>
+            <column name="title">Custom Platforms</column>
+            <column name="alias">custom-platforms</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	Custom Platforms&lt;/h5&gt;
+&lt;p&gt;
+	Quaternion Engineering specializes in the design, construction and testing of custom platform and flight test demonstrators. We can quickly and cost effectively develop a solution for you custom payload or mission requirements.&lt;/p&gt;
+&lt;p&gt;
+	Quaternion has been involved in projects ranging from a 6m unmanned aircraft system to a series of aircraft for testing the aeroelastic response of a novel joined wing configuration. Please contact us with any questions regarding the your custom aircraft needs.&lt;/p&gt;
+&lt;p&gt;
+	{becssg}custom{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:19:50</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-23 04:42:07</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:19:50</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">3</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">4183</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">22</column>
+            <column name="asset_id">57</column>
+            <column name="title">Autopilots</column>
+            <column name="alias">autopilots</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h2&gt;
+	Autopilots&lt;/h2&gt;
+&lt;p&gt;
+	Site under construction&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:24:14</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-02-29 00:01:39</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:24:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">14</column>
+            <column name="parentid">0</column>
+            <column name="ordering">2</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">5263</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">43</column>
+            <column name="asset_id">84</column>
+            <column name="title">Project Manager</column>
+            <column name="alias">kurt</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;Kurt Fairfield&quot; src=&quot;images/kurt.png&quot; style=&quot;float: left; width: 211px; height: 200px; padding-right: 15px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+	Kurt Fairfield brings expertise in mechanical design and industrial project management to the Quaternion team.&amp;nbsp; Mr. Fairfield is responsible for application development and commercialization of UAS platforms developed by Quaternion.&amp;nbsp; Previous experience includes; technology integration for the mining and forestry sectors, custom machine design for industrial manufacturing sector, custom machine design for the explosives decontamination sector and management of the design and construction of natural gas facilities throughout Alberta and British Columbia.&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;
+	Email: &lt;a href=&quot;mailto:kurt@quaternionaerospace.com&quot;&gt;kurt@quaternionaerospace.com&lt;/a&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2013-02-14 16:09:47</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2013-02-14 16:24:52</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2013-02-14 16:09:47</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">2</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">25</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">23</column>
+            <column name="asset_id">58</column>
+            <column name="title">Ground Control Stations</column>
+            <column name="alias">ground-control-stations</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	Ground Control Stations&lt;/h5&gt;
+&lt;h6&gt;
+	Mobile Command Centre&lt;/h6&gt;
+&lt;p&gt;
+	Quaternion Aerospace&amp;#39;s Mobile Command Centres (MCC) including one based around a 14 foot, enclosed cargo trailer. The MCC allowed for easy transportation and storage of larger airframes, support equipment such as the Ground Control Station, generators and field equipment. Contact quaternion to discuss the your custom requirements.&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;Please call or email us for additional information. &lt;/strong&gt;&lt;/p&gt;
+&lt;h6&gt;
+	Field Command Station&lt;/h6&gt;
+&lt;p&gt;
+	Quaternion Aerospace can provide clients with a compact Field Command Station (FCS). The FCS allows for easy transportation of a ruggedized laptop, groundside autopilot RF communications link, backup power and small field tool kit. (16&amp;quot;L x 13&amp;quot;W x 6.88&amp;quot;H)&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;Please call or email us for additional information. &lt;/strong&gt;&lt;/p&gt;
+&lt;h6&gt;
+	Field Command Station Extended&lt;/h6&gt;
+&lt;p&gt;
+	The extended version of the field command station includes all features of the standard FCS but also includes a 17&amp;rdquo;, sunlight readable, transflective LCD monitor. The Extended FCS deploys with telescoping legs to provide convienent workspace in the field while still maintaining small footprint in stowed configuration. (53&amp;quot;L x 16&amp;quot;W x 6.12&amp;quot;H)&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;Please call or email us for additional information. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+	{becssg}gcs{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:28:13</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-02-29 00:03:28</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:28:13</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">7</column>
+            <column name="parentid">0</column>
+            <column name="ordering">5</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">4958</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">24</column>
+            <column name="asset_id">59</column>
+            <column name="title">Software</column>
+            <column name="alias">software</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;Software&lt;/h5&gt;
+&lt;p&gt;Quaternion has developed custom software solutions for Aircraft Sizing, Multi-Disciplinary Optimization (MDO) and Visualization. In addition, custom software solutions can be developed to meet your custom needs.&lt;/p&gt;
+&lt;p&gt; Check out our existing software or contact us to discuss tailored software solutions for you particular needs. Note: Evaluation copies of software are available upon request&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:32:21</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-01-25 06:51:13</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:32:21</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">3</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3006</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">25</column>
+            <column name="asset_id">60</column>
+            <column name="title">MDO Tool</column>
+            <column name="alias">mdo-tool</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;strong&gt;&lt;em&gt;Wing MDO Framework&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+	A Multidisciplinary Design Optimization framework for conceptual aircraft wing design has been developed and implemented with a user friendly Graphical User Interface (GUI). The latter is equipped with a DirectX powered 3D interactive viewer. The application itself consists of several modules, covering various disciplines such as aerodynamics, structural analysis or cost analysis. The modularity of this tool paves the way for easy updating and augmentation of its capabilities. Some of the main features are detailed below:&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;em&gt;Geometry module&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Definition of wing jig shape using user provided airfoil sections. Changes are visible in real time.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;em&gt;Aerodynamics module&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Doublet Source Lattice aerodynamics code (&lt;em&gt;Zephyr&lt;/em&gt;, in-house development).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Calculation of major aerodynamic coefficients and stability derivatives, surface pressure distribution (friction and form drag calculated separately and included in the general pressure field).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Support for up to 3 user defined control surfaces (functioning as flaps or ailerons).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Support for pylon/engine assemblies (pylon and engine contours can be customized by the user).&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;em&gt;Structural module&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Fully parameterizable wing structure composed of spars, ribs, stringers and skin panels through a TreeView control (control over positioning, thicknesses, section and material properties, etc.).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Changes to the wing structure are visible in real time.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;em&gt;Aeroelasticity module&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Use of in-house developed meshing code in pre-processing. Coupling with FEAP&amp;reg; finite element solver (University of California, Berkeley). Post processing in application interface (displacement and stress fields).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Option for fully coupled aeroelastic analysis (fluid-structure two-way interaction) using FEAP&amp;reg;.&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Optional output in APDL (ANSYS&amp;reg; Parametric Design Language) format for use with ANSYS&amp;reg; Multiphysics&amp;reg;.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;em&gt;Optimization module&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Customizable design optimization problems: ability to choose from a set of over 300 variables.&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Gradient based optimization (CFSQP optimization code by &lt;em&gt;AEM Design&lt;/em&gt;) using either direct evaluation or a surrogate model approach.&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Surrogate model types: Quadratic interpolation, regression Kriging or Artificial Neural Networks.&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Robustness and reliability based analysis and optimization methods available (RDO, RBDO and a hybrid implementation named R&lt;sup&gt;2&lt;/sup&gt;BDO).&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	Real time optimization history plots&lt;/p&gt;
+&lt;p style=&quot;margin-left: 90pt;&quot;&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;Please call or email us for additional information. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+	{becssg}mdo{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 20:50:26</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-04-03 21:44:15</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 20:50:26</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">12</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">5007</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">26</column>
+            <column name="asset_id">61</column>
+            <column name="title">Telemetry Viewer</column>
+            <column name="alias">telemetry-viewer</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;h5&gt;
+	Quaternion TelemViewer&amp;reg; Software&lt;/h5&gt;
+&lt;p&gt;
+	Quaternion TelemViewer Software provides real time visualization of aircraft states and telemetry to augment existing commercial Ground Control Software. TelemView interfaces with the GCS data stream and can output the aircrafts position and attitude to interface or to your choice of commercial and open source Flight Simulators (Xplane*, and Flight Gear*). Some features include:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+		Interfaces available for Picollo and Micropilot GCS (contact us for custom solution)&lt;/li&gt;
+	&lt;li&gt;
+		Choice of live telemetry mode or replay logged flight data&lt;/li&gt;
+	&lt;li&gt;
+		Aircraft states can be visualized in custom interface, X-plane or Flight Gear&lt;/li&gt;
+	&lt;li&gt;
+		Telemetry viewing with aircraft gauges and text. Some examples Aircraft altitude above launch, GPS/Barometric Altitude &amp;bull;Artificial horizon, climb rate, bearing gauges &amp;bull;Aircraft health information such as battery voltages and control state.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+	&lt;strong&gt;Please call or email us for additional information. &lt;/strong&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">7</column>
+            <column name="created">2011-01-14 21:04:15</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-04-03 21:44:36</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-14 21:04:15</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">3</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">4065</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">27</column>
+            <column name="asset_id">64</column>
+            <column name="title">Temporary Home Page</column>
+            <column name="alias">temporary-home-page</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p style=&quot;text-align: center;&quot;&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Manufacturing.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Testing.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion Engineering_is_experienced_in_operating_unmanned_systems.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">2</column>
+            <column name="created">2011-01-25 00:45:08</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-11 17:36:08</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-25 00:45:08</column>
+            <column name="publish_down">2012-10-10 18:26:49</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;0&quot;,&quot;show_email_icon&quot;:&quot;0&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">37</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">2</column>
+            <column name="hits">26</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">28</column>
+            <column name="asset_id">65</column>
+            <column name="title">Fly</column>
+            <column name="alias">fly</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	Quaternion operates an array of fixed and rotary wing UAVs for a variety of purposes including research and development, remote sensing and mapping. We have a variety of UAVs in fully operation states available to perform missions tailored around your specific needs. This may include but is not limited to the following&amp;hellip;&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Reconnaissance / Patrol/ Video Surveillance&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Infrared Inspection&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Payload Delivery&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Search and Rescue&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Forest Fire Patrol&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Crime Scene Mapping&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Avalanche Prevention&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Power Line Inspection and Pipeline Patrol&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Aerial Photography Imaging and Mapping&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; TV and Video Production&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Event Monitoring&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Structural Inspection&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Agricultural Crop Surveys&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Aerial Fish Spotting&lt;/p&gt;
+&lt;p&gt;
+	&amp;bull;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Wildlife Inventory/Bird Scare&lt;/p&gt;
+&lt;p&gt;
+	Contact us for more information on having quaternion operate an unmanned system for your specific mission and payload requirements. We are capable of deploying worldwide, year round. Please note, We are also available to demonstrate our capabilities upon special request.&lt;/p&gt;
+&lt;p&gt;
+	{becssg}fly{/becssg}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">8</column>
+            <column name="created">2011-01-25 04:07:22</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-23 05:33:10</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-25 04:07:22</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1090</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">39</column>
+            <column name="asset_id">80</column>
+            <column name="title">Soon</column>
+            <column name="alias">soon</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	Soon online...&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">2</column>
+            <column name="created">2012-10-11 20:29:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-11 20:37:12</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2012-10-11 20:29:00</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;0&quot;,&quot;link_titles&quot;:&quot;0&quot;,&quot;show_intro&quot;:&quot;0&quot;,&quot;show_category&quot;:&quot;0&quot;,&quot;link_category&quot;:&quot;0&quot;,&quot;show_parent_category&quot;:&quot;0&quot;,&quot;link_parent_category&quot;:&quot;0&quot;,&quot;show_author&quot;:&quot;0&quot;,&quot;link_author&quot;:&quot;0&quot;,&quot;show_create_date&quot;:&quot;0&quot;,&quot;show_modify_date&quot;:&quot;0&quot;,&quot;show_publish_date&quot;:&quot;0&quot;,&quot;show_item_navigation&quot;:&quot;0&quot;,&quot;show_icons&quot;:&quot;0&quot;,&quot;show_print_icon&quot;:&quot;0&quot;,&quot;show_email_icon&quot;:&quot;0&quot;,&quot;show_vote&quot;:&quot;0&quot;,&quot;show_hits&quot;:&quot;0&quot;,&quot;show_noauth&quot;:&quot;0&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">8</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">6415</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">32</column>
+            <column name="asset_id">71</column>
+            <column name="title">contact</column>
+            <column name="alias">contact</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	3rr4r4&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">2</column>
+            <column name="created">2011-02-19 08:33:45</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">0000-00-00 00:00:00</column>
+            <column name="modified_by">0</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-02-19 08:33:45</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs"></column>
+            <column name="version">1</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">0</column>
+            <column name="metadata"></column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">31</column>
+            <column name="asset_id">70</column>
+            <column name="title">Contact</column>
+            <column name="alias">contact</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	{loadposition breadcrumbs}&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">11</column>
+            <column name="created">2011-02-19 07:45:09</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-02-23 06:29:30</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-02-19 07:45:09</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;0&quot;,&quot;show_category&quot;:&quot;0&quot;,&quot;link_category&quot;:&quot;0&quot;,&quot;show_parent_category&quot;:&quot;0&quot;,&quot;link_parent_category&quot;:&quot;0&quot;,&quot;show_author&quot;:&quot;0&quot;,&quot;link_author&quot;:&quot;0&quot;,&quot;show_create_date&quot;:&quot;0&quot;,&quot;show_modify_date&quot;:&quot;0&quot;,&quot;show_publish_date&quot;:&quot;0&quot;,&quot;show_item_navigation&quot;:&quot;0&quot;,&quot;show_icons&quot;:&quot;0&quot;,&quot;show_print_icon&quot;:&quot;0&quot;,&quot;show_email_icon&quot;:&quot;0&quot;,&quot;show_vote&quot;:&quot;0&quot;,&quot;show_hits&quot;:&quot;0&quot;,&quot;show_noauth&quot;:&quot;0&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">20</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">108</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">42</column>
+            <column name="asset_id">83</column>
+            <column name="title">President and CEO</column>
+            <column name="alias">suleman</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;Afzal Suleman&quot; src=&quot;images/suleman.jpg&quot; style=&quot;float: left; padding-right: 15px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;President and CEO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+	Afzal Suleman, Phd, PEng, is a Professor of Aerospace Engineering, University of Victoria, BC, Canada.&amp;nbsp; He holds a BSc (Honours) and MSc in Aeronautical Engineering from Imperial College, University of London, UK and a PhD in Space Dynamics from the University of British Columbia, Canada. Dr. Suleman is an alumni of the International Space University, Japan, 1992.&amp;nbsp; His past and current associations include: National Academy of Sciences/National Research Council Fellowship, USA, 1992-1994; Advanced Aerospace Structures at Wright-Patterson AFB, U.S. Air Force; National Delegate at NATO Research and Technology Organization Applied Vehicle Technology NATO-CSO; Associate Fellow of the American Institute of Aeronautics and Astronautics; a member of the Canadian Aeronautics and Space Institute; and a member of the AIAA Multidisciplinary Design Optimization Technical Committee.&amp;nbsp; Dr. Suleman&amp;#39;s expertise extends across; Multidisciplinary Design Optimization, Aircraft Design, Airframe Design, and Novel Energy Efficient Aircraft Configurations.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Email:&amp;nbsp;&lt;a href=&quot;mailto:suleman@quaternionaerospace.com&quot;&gt;suleman@quaternionaerospace.com&lt;/a&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2013-02-14 16:00:29</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2013-02-14 21:37:26</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2013-02-14 16:00:29</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">6</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">4954</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">38</column>
+            <column name="asset_id">79</column>
+            <column name="title">HOMEPAGE ALEXANDRE</column>
+            <column name="alias">homepage-alexandre</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p style=&quot;text-align: center;&quot;&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Specializes_in_Aircraft_Design_and_provides_wide_range_modeling_services.png&quot; style=&quot;height: 191px; width: 220px; border: 1px solid white;&quot; /&gt;&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Manufacturing.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion_Engineering_Testing.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;img alt=&quot;alt&quot; src=&quot;images/HomePage-Design-Build-Test-Fly-Static/Quaternion Engineering_is_experienced_in_operating_unmanned_systems.png&quot; style=&quot;width: 220px; height: 191px; border: 1px solid white;&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">2</column>
+            <column name="created">2011-01-25 00:45:08</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-11 17:20:38</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-01-25 00:45:08</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;0&quot;,&quot;show_email_icon&quot;:&quot;0&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">2</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">0</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">33</column>
+            <column name="asset_id">72</column>
+            <column name="title">Contact</column>
+            <column name="alias">contacts</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.853089615993!2d-123.41681443334437!3d48.65092558941756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f68799f625983%3A0xb3c30d2b799775af!2s9800+McDonald+Park+Rd%2C+Sidney%2C+BC+V8L+1W7!5e0!3m2!1sen!2sca!4v1449013504208&quot; width=&quot;400&quot; height=&quot;300&quot; frameborder=&quot;0&quot; style=&quot;border:0;float:right;&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Administration:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Quaternion Aerospace Inc.&lt;/p&gt;
+&lt;p&gt;3906 Woodhaven Terrace&lt;/p&gt;
+&lt;p&gt;Victoria BC. V8N 1S6&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Engineering R&amp;amp;D:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Suite 6, Viscount Aero Center&lt;/p&gt;
+&lt;p&gt;9800 MacDonald Park Road&lt;/p&gt;
+&lt;p&gt;Sidney, BC, &lt;span class=&quot;st&quot;&gt;V8L 5W5&lt;/span&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">11</column>
+            <column name="created">2011-02-23 06:34:55</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-12-02 00:11:01</column>
+            <column name="modified_by">53</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-02-23 06:34:55</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;1&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">20</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">8167</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">34</column>
+            <column name="asset_id">74</column>
+            <column name="title">DESIGN</column>
+            <column name="alias">design1</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;http://www.quaternionaerospace.com/images/HomepageSlider/Quaternion_Engineering_Specializes_in_Aircraft_Design_and_provides_wide_range_modeling_services.png&quot; style=&quot;width: 447px; height: 206px;&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2011-04-02 19:11:54</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-05-03 18:51:58</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-04-02 19:11:54</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">10</column>
+            <column name="parentid">0</column>
+            <column name="ordering">4</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3461</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">35</column>
+            <column name="asset_id">75</column>
+            <column name="title">BUILD</column>
+            <column name="alias">build</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;http://www.quaternionaerospace.com/images/HomepageSlider/Quaternion_Engineering_Manufacturing.png&quot; style=&quot;width: 447px; height: 206px;&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2011-04-02 19:12:47</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2012-10-15 11:51:26</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-04-02 19:12:47</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;0&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">11</column>
+            <column name="parentid">0</column>
+            <column name="ordering">3</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3347</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">36</column>
+            <column name="asset_id">76</column>
+            <column name="title">TEST</column>
+            <column name="alias">test1</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;http://www.quaternionaerospace.com/images/HomepageSlider/Quaternion_Engineering_Testing.png&quot; style=&quot;width: 447px; height: 206px;&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2011-04-02 19:14:11</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-05-03 18:52:48</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-04-02 19:14:11</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">7</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3325</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">37</column>
+            <column name="asset_id">77</column>
+            <column name="title">FLY</column>
+            <column name="alias">fly1</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;
+	&lt;img alt=&quot;alt&quot; src=&quot;http://www.quaternionaerospace.com/images/HomepageSlider/Quaternion Engineering_is_experienced_in_operating_unmanned_systems.png&quot; /&gt;&lt;/p&gt;
+</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">12</column>
+            <column name="created">2011-04-02 19:14:58</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2011-05-03 18:52:23</column>
+            <column name="modified_by">42</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2011-04-02 19:14:58</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">5</column>
+            <column name="parentid">0</column>
+            <column name="ordering">2</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">3253</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">44</column>
+            <column name="asset_id">85</column>
+            <column name="title">Project Manager</column>
+            <column name="alias">testing-article</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;TBC&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">-2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2013-02-14 16:00:29</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2014-04-06 02:10:59</column>
+            <column name="modified_by">50</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2013-02-14 16:00:29</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">8</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">899</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">45</column>
+            <column name="asset_id">86</column>
+            <column name="title">Project Manager</column>
+            <column name="alias">project-manager</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/eldad alber.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Eldad Alber – B.Sc. Mechanical Engineering, Project Manager&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Eldad brings 9 years experience in project management of multidisciplinary projects within Canada and Internationally. Eldad’s skills are focused on Planning, execution, and project delivery within the triple constraints of time, budget and scope objectives.  Eldad brings to the team the means to Identify, effectively communicate, and resolve project issues and risks.  Develop risk mitigation plans.  Effectively communicate project status to project stakeholders. Coach, mentor, and motivate team members, influencing them to take positive action and accountability for assigned work.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-11-30 18:40:33</column>
+            <column name="modified_by">51</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">3</column>
+            <column name="parentid">0</column>
+            <column name="ordering">5</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1202</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">46</column>
+            <column name="asset_id">87</column>
+            <column name="title">Chief Technology Officer</column>
+            <column name="alias">technology-officer</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/jenner richards.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jenner Richards - Ph.D, Chief Technology Officer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Jenner Richards is a Mechanical Engineer with aerospace experience in both manned and unmanned aircraft design and testing. Previous experience has ranged from the design of an aircraft fuel system for a deHavilland Beaver turboprop conversion, to FE analysis of aircraft structures in support of Transport Canada certification. Technical Lead in the US Air Force/Virginia Tech Sensorcraft project.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-11-30 18:40:33</column>
+            <column name="modified_by">0</column>
+            <column name="checked_out">50</column>
+            <column name="checked_out_time">2017-06-13 23:09:16</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">1</column>
+            <column name="parentid">0</column>
+            <column name="ordering">4</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">251</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">47</column>
+            <column name="asset_id">88</column>
+            <column name="title">Technologist</column>
+            <column name="alias">technologist</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/john raffaelli.jpg&quot; border=&quot;0&quot; width=&quot;200&quot; height=&quot;267&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;John Raffaelli, Technologist&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Extensive experience in mechanical and electrical engineering along with a commercial pilot's licence. His main responsibilities include: managing the workshop facilities, ensuring all manufacturing, testing  and construction is carried out to the highest standards and to prepare and conduct experimental flight testing.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-12-01 19:00:34</column>
+            <column name="modified_by">51</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">4</column>
+            <column name="parentid">0</column>
+            <column name="ordering">3</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1086</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">48</column>
+            <column name="asset_id">89</column>
+            <column name="title">CAD Designer</column>
+            <column name="alias">cad-designer</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/josh cockroft.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;J&lt;/strong&gt;&lt;strong&gt;osh Cockroft - Technologist, CAD Designer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Josh is an IRAP-NRC Young Trainee and he is the beating heart of mechanical design at Quaternion Aerospace, focusing on Computer Aided Design. Experience with composite design as well as project documentation and procurement processes. Josh takes large role in the component integration and manual assembly, along with performing a portion of the aircraft ground testing. Critical role as part of the flight operations crew as launcher operator and media management.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">0000-00-00 00:00:00</column>
+            <column name="modified_by">0</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">1</column>
+            <column name="parentid">0</column>
+            <column name="ordering">2</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1086</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">49</column>
+            <column name="asset_id">90</column>
+            <column name="title">Electrical and Instrumentation Lead</column>
+            <column name="alias">instrumentation-lead</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/stephen warwick.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stephen Warwick - EIT, Electrical and Instrumentation Lead&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Stephen is a graduate of mechanical engineering, specializing in mechatronics and digital/optical sensor design. Past experiences include the design, application, validation, and operation of a variety of distributed sensors including strain using conventional foil gauges, design of an Electronic Flight Data Recorder, and Optical Pressure sensing.  Additionally, Stephen has experience with numerical modelling, and data analysis.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">2</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">2015-12-01 19:00:06</column>
+            <column name="modified_by">51</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">2</column>
+            <column name="parentid">0</column>
+            <column name="ordering">1</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1089</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+        <table name="jos_content">
+            <column name="id">50</column>
+            <column name="asset_id">91</column>
+            <column name="title">Mechanical Lead</column>
+            <column name="alias">mechanical-lead</column>
+            <column name="title_alias"></column>
+            <column name="introtext">&lt;p&gt;&lt;img src=&quot;images/Personnel/willem brussow.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;float: left; padding-right: 15px; border: 0;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Willem Brussow - EIT, Mechanical Lead&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Willem has been involved in RC Aircraft for 15 years, and brings this experience to Quaternion Aerospace, along with a degree in Mechanical Engineering from the University of Victoria. In his role as Mechanical Lead, he designed the internal structure as well as an articulated composite skin for an aeroservoelasticaly scaled UAV wing.  He developed an automated flight test utility to do highly controlled and repeatable flight tests for use in characterizing UAVs. Willem is also the primary pilot at Quaternion and is heavily involved in flight operations.&lt;/p&gt;</column>
+            <column name="fulltext"></column>
+            <column name="state">1</column>
+            <column name="sectionid">0</column>
+            <column name="mask">0</column>
+            <column name="catid">10</column>
+            <column name="created">2015-11-30 03:43:00</column>
+            <column name="created_by">42</column>
+            <column name="created_by_alias"></column>
+            <column name="modified">0000-00-00 00:00:00</column>
+            <column name="modified_by">0</column>
+            <column name="checked_out">0</column>
+            <column name="checked_out_time">0000-00-00 00:00:00</column>
+            <column name="publish_up">2015-11-30 18:23:14</column>
+            <column name="publish_down">0000-00-00 00:00:00</column>
+            <column name="images"></column>
+            <column name="urls"></column>
+            <column name="attribs">{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;}</column>
+            <column name="version">1</column>
+            <column name="parentid">0</column>
+            <column name="ordering">0</column>
+            <column name="metakey"></column>
+            <column name="metadesc"></column>
+            <column name="access">1</column>
+            <column name="hits">1153</column>
+            <column name="metadata">{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</column>
+            <column name="featured">0</column>
+            <column name="language">*</column>
+            <column name="xreference"></column>
+        </table>
+    </database>
+</pma_xml_export>
