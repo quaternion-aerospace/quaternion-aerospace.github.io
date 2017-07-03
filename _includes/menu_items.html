@@ -2,10 +2,17 @@
 	assign link = site.pages | where: "path", item.page %}{%
 	assign link = link[0] %}{%
 	capture nexti %}{{include.indent}}		{% endcapture %}{%
-	if (page.path == item.page or page.section == item.label) %}{%
+	if (page.path == item.page) %}{%
 		assign isCurrent = true %}{%
 	else %}{%
 		assign isCurrent = false %}{%
+		for m in item.match %}{%
+			assign len = m | size %}{%
+			assign pathStart = page.path | slice: 0, len %}{%
+			if m == pathStart %}{%
+				assign isCurrent = true %}{%
+			endif %}{%
+		endfor %}{%
 	endif
 %}{% unless forloop.first %}
 {{include.indent}}{% endunless %}<li{% if isCurrent %} class="current"{% endif %}>
