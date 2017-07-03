@@ -4,18 +4,19 @@
 	capture nexti %}{{include.indent}}		{% endcapture %}{%
 	if (page.path == item.page) %}{%
 		assign isCurrent = true %}{%
+		assign hasCurrent = false %}{%
 	else %}{%
 		assign isCurrent = false %}{%
 		for m in item.match %}{%
 			assign len = m | size %}{%
 			assign pathStart = page.path | slice: 0, len %}{%
 			if m == pathStart %}{%
-				assign isCurrent = true %}{%
+				assign hasCurrent = true %}{%
 			endif %}{%
 		endfor %}{%
 	endif
 %}{% unless forloop.first %}
-{{include.indent}}{% endunless %}<li{% if isCurrent %} class="current"{% endif %}>
+{{include.indent}}{% endunless %}<li{% if isCurrent or hasCurrent %} class="current"{% endif %}>
 {{include.indent}}	<a{% unless isCurrent %} href="{{link.url}}"{% endunless %}>{{item.label}}</a>{%
 	if item.submenu	%}
 {{include.indent}}	<ul>
