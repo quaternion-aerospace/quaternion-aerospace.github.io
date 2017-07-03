@@ -27,8 +27,8 @@
 		<ul>
 			{% include menu_items.html menu=site.data.menus.global indent="			" %}
 			<li>
-				<form>
-					<input type="search" name="q" placeholder="search"/>
+				<form action="/search/">
+					<input type="search" name="q" placeholder="search…"/>
 					<button type="submit">Search</button>
 				</form>
 			</li>
