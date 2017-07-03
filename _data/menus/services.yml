@@ -1,0 +1,20 @@
+- label: Build
+  page: build.html
+- label: Design
+  page: design.html
+- label: Test
+  page: test.html
+- label: Fly
+  page: fly.html
+- label: Consulting
+  page: consulting.html
+- label: Surveillance
+  page: servicessurveillance.html
+- label: Aerial Photography
+  page: servicesaerialp.html
+- label: Agricultural and Forest Surveys
+  page: servicesagri.html
+- label: Search and Rescue
+  page: servicessearch.html
+- label: Wildlife Preservation
+  page: serviceswildlife.html

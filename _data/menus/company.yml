@@ -1,0 +1,37 @@
+- label: Our History
+  page: history.html
+- label: Meet Our Team
+  page: team/index.html
+  submenu:
+    - label: President and CEO
+      page: team/suleman.html
+    - label: Chief Technology Officer
+      page: team/richards.html
+    - label: Airframes and Payload
+      page: team/flagg.html
+    - label: Avionics Technician
+      page: team/brussow.html
+    - label: Software Development
+      page: team/rahimi.html
+    - label: Intern
+      page: team/lu.html
+    - label: Project Manager
+      page: team/kurt-fairfiels.html
+    - label: Project Manager
+      page: team/kurt.html
+    - label: Project Manager
+      page: team/kurt2.html
+    - label: President and CEO
+      page: team/kurt-fairfield.html
+    - label: Project Manager
+      page: team/alber.html
+    - label: Chief Technology Officer
+      page: team/richards2.html
+    - label: Technologist
+      page: team/raffaelli.html
+    - label: CAD Designer
+      page: team/cockroft.html
+    - label: Instrumentation Lead
+      page: team/warwick.html
+    - label: Mechanical Lead
+      page: team/brussow-2.html

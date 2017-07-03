@@ -1,0 +1,14 @@
+- label: Fleet
+  page: fleet.html
+- label: Services
+  page: services.html
+- label: Education
+  page: education.html
+- label: Company
+  page: company.html
+- label: Module
+  page: module.html
+- label: Contact
+  page: contact.html
+- label: Software
+  page: software2.html
