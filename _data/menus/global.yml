@@ -2,10 +2,17 @@
   page: index.html
 - label: Services
   page: services.html
+  match:
+    - services
 - label: Fleet
   page: fleet.html
+  match:
+    - software/
+    - uav/
 - label: Company
   page: company.html
+  match:
+    - team/
 - label: Education
   page: education.html
 - label: Contact
