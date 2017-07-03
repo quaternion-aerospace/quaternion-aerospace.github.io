@@ -1,5 +1,6 @@
 {% for item in include.menu %}{%
 	assign link = site.pages | where: "path", item.page %}{%
+	assign link = link[0] %}{%
 	capture nexti %}{{include.indent}}		{% endcapture %}{%
 	if (page.path == item.page or page.section == item.label) %}{%
 		assign isCurrent = true %}{%
