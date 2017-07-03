@@ -66,25 +66,33 @@ body {
 	color: inherit;
 	display: block;
 	padding: 0.5em 15px;
-	margin: 0.25em 0;
+	margin: 0.25em 2px;
 	border: 1px solid transparent;
 	border-radius: 5px;
 }
-.siteNav a:hover,
 .siteNav .current a,
-.siteNav:hover .current a:hover {
+.siteNav .current a:hover {
 	color: white;
 	background-color: #333;
-	text-decoration: none;
 	border-color: black;
 	background-image: linear-gradient(to top, #333 50%, #555);
 	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
-.siteNav:hover .current a {
-	background: transparent;
-	box-shadow: none;
-	color: inherit;
-	border-color: transparent;
+.siteNav a:hover,
+.siteNav .current a[href]:hover {
+	text-decoration: none;
+	background-color: #00a8ff;
+	border-color: #2276c2;
+	color: black;
+	box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
+	background-image: linear-gradient(
+		to top,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, .75) 80%
+	);
+}
+.siteNav .current a[href]:hover {
+	border-color: black;
 }
 .siteNav li:last-child {
 	margin-left: auto;
@@ -159,6 +167,12 @@ body {
 	background-color: #ddd;
 	background-image: linear-gradient(to bottom, white, #ddd 40%);
 	color: #333;
+	text-decoration: none;
+}
+.subMenu a[href]:hover {
+	background-color: #2276c2;
+	background-image: linear-gradient(to top, #2276c2, #00a8ff 90%);
+	color: white;
 	text-decoration: none;
 }
 
