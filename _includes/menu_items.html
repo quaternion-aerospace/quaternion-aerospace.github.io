@@ -7,7 +7,13 @@
 		assign hasCurrent = false %}{%
 	else %}{%
 		assign isCurrent = false %}{%
-		for m in item.match %}{%
+		assign hasCurrent = false %}{%
+		for path in item.hasExact %}{%
+			if path == page.path %}{%
+				assign hasCurrent = true %}{%
+			endif %}{%
+		endfor %}{%
+		for m in item.hasMatch %}{%
 			assign len = m | size %}{%
 			assign pathStart = page.path | slice: 0, len %}{%
 			if m == pathStart %}{%

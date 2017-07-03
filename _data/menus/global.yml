@@ -2,18 +2,28 @@
   page: index.html
 - label: Services
   page: services.html
-  match:
+  hasExact:
+    - build.html
+    - design.html
+    - test.html
+    - fly.html
+    - consulting.html
+  hasMatch:
     - services
 - label: Fleet
   page: fleet.html
-  match:
+  hasMatch:
     - software/
     - uav/
 - label: Company
   page: company.html
-  match:
+  hasExact:
+    - history.html
+  hasMatch:
     - team/
 - label: Education
   page: education.html
+  hasExact:
+    - advanced-course.html
 - label: Contact
   page: contact.html
