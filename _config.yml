@@ -2,7 +2,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-permalink: :slug
+permalink: pretty
 defaults:
   -
     scope:
