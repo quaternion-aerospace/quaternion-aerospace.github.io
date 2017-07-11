@@ -1,0 +1,21 @@
+$rootLineHeight: 1.125; // base line-height ratio
+
+$mobileBreakPt: 600px; // be more extravagant when above this viewport width
+
+$pad: 15px; // standard spacing between visual elements
+$borderRadius: 6px; // standard border radius
+
+$link: #2276c2; // link indicator color
+$linkHighlight: #00a8ff; // link highlight color
+
+$uiBg: #f5f5f5; // menu/widget background
+$uiShineHigh: white; // highlight color for $uiBg
+$uiShineLow: #ddd; // shadow color for $uiBg
+$uiBorder: #ccc; // border aroung $uiBg, or for element grouping
+$uiShadow: 0 2px 2px rgba(black, 0.15); // box-shadow for elements with $uiBg
+
+$altUiBg: #333; // alternate menu/widget background
+$altUiShineHigh: #555; // highlight color for $altUiBg
+$altUiShineLow: #333; // shadow color for $altUiBg
+$altUiBorder: black; // border around $altUiBg
+$altUiShadow: inset 0 1px 1px rgba(white, 0.2); // box-shadow for elements with $altUiBg

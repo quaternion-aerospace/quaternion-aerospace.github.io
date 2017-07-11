@@ -1,0 +1,15 @@
+.hero {
+	display: none;
+}
+
+@media (min-width: $mobileBreakPt) {
+	.hero {
+		display: block;
+		margin: $pad;
+	}
+
+	.hero img {
+		width: 100%;
+		height: auto;
+	}
+}

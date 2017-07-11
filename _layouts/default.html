@@ -4,8 +4,9 @@
 	<title>{% if page.title %}{{page.title |xml_escape}} – {% endif %}Quaternion Aerospace</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width"/>
-	<link rel="stylesheet" href="/base.css"/>{% if page.stylesheet %}
-	<link rel="stylesheet" href="/{{page.stylesheet |uri_escape |xml_escape}}.css"/>{% endif %}
+	<link rel="stylesheet" href="/css/base.css"/>{% if page.gallery %}
+	<link rel="stylesheet" href="/css/gallery.css"/>{% endif %}{% if page.stylesheet %}
+	<link rel="stylesheet" href="/css/{{page.stylesheet |uri_escape |xml_escape}}.css"/>{% endif %}
 </head>
 <body>
 <header class="siteHead">
@@ -48,7 +49,7 @@
 	</ul>
 </nav>
 {% endif %}
-<main>
+<main class="siteMain">
 {{ page.content }}
 {% include gallery.html %}
 </main>

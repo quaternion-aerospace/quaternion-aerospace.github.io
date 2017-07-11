@@ -1,0 +1,72 @@
+// expected structure:
+// .subMenu
+//   ul
+//     li
+//       a[href]
+//       ul
+//         li
+//           a[href]
+//         ...
+//     ...
+//     li.current
+//       a
+
+.subMenu {
+	box-sizing: border-box;
+	background-color: $altUiBg;
+	border: 1px solid $altUiBorder;
+	border-radius: $borderRadius;
+	font-size: 0.8rem;
+	line-height: 1.6;
+	box-shadow: $altUiShadow;
+	background-image: linear-gradient(to bottom, $altUiShineHigh, $altUiShineLow 20px);
+	margin: $pad 0;
+
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	> ul {
+		padding: $pad 0;
+	}
+
+	a {
+		display: block;
+		color: $uiShineLow;
+		padding: 0 $pad;
+
+		&[href]:hover {
+			background-color: $link;
+			background-image: linear-gradient(to top, $link, $linkHighlight 90%);
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	ul ul a {
+		// note: pad "a" instead of list itself so bg will stretch across
+		padding-left: (2 * $pad);
+	}
+	// only supports one level of nesting for now!
+
+	.current > a {
+		background-color: $uiBg;
+		background-image: linear-gradient(to bottom, $uiShineHigh, $uiShineLow 40%);
+		color: $altUiBg;
+		text-decoration: none;
+	}
+
+	@media (min-width: $mobileBreakPt) {
+		// float to left of .siteMain
+		width: 200px;
+		float: left;
+		margin-top: 0; // float's margin-top doesn't collapse
+		margin-bottom: (2 * $pad); // reflect .siteFoot's margin-top
+
+		& + .siteMain {
+			margin-left: (200px + $pad);
+		}
+	}
+}

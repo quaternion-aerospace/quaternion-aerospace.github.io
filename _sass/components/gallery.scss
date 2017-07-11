@@ -1,0 +1,33 @@
+.gallery {
+	$thumbWidth: 120px;
+
+	list-style: none;
+	margin: (2 * $pad) 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+
+	> li {
+		flex: 1 1 $thumbWidth;
+		display: inline-block;
+		margin: 2px;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	img {
+		max-width: $thumbWidth;
+		max-height: $thumbWidth;
+		box-shadow: 1px 1px 3px rgba(black, 0.5);
+		transition: transform 200ms ease;
+
+		&:hover {
+			outline: 3px solid $linkHighlight;
+			position: relative;
+			z-index: 2; // above other gallery items
+			transform: scale(1.1);
+		}
+	}
+}

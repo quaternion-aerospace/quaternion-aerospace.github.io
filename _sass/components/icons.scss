@@ -1,0 +1,34 @@
+$iconSize: (1em * $rootLineHeight);
+
+%iconified {
+	&::before {
+		content: "";
+		display: inline-block;
+		height: $iconSize;
+		width: $iconSize;
+		background: transparent center / contain no-repeat;
+		vertical-align: middle;
+	}
+
+	&.replace {
+		white-space: pre;
+		width: $iconSize;
+		overflow: hidden;
+		color: transparent;
+	}
+}
+
+@mixin icon($img) {
+	@extend %iconified;
+	&::before {
+		background-image: url($img);
+	}
+}
+
+.icon-phone {
+	@include icon('/images/phone1.jpg');
+}
+
+.icon-email {
+	@include icon('/images/mail1.jpg');
+}

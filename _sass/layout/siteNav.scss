@@ -1,0 +1,103 @@
+// expected structure:
+// .siteNav
+//   ul
+//     li
+//       a[href]
+//     li.current
+//       a
+//     ...
+//     li:last-child
+//       form
+//         input[type='search']
+//         button[type='submit']
+
+.siteNav {
+	$navButtonVSpace: 0.25em;
+	$navButtonVPad: 0.5em;
+
+	width: 100%; // force own line in flex container
+	border: 1px solid $uiBorder;
+	border-radius: $borderRadius;
+	overflow: hidden; // trim content to border-radius
+	box-shadow: $uiShadow;
+	background-color: $uiBg;
+	background-image: linear-gradient(to bottom, $uiShineHigh, $uiShineLow);
+
+	> ul {
+		margin: 0;
+		padding: 0;
+		padding-left: 1em;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		> li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	a {
+		color: inherit;
+		display: block;
+		padding: $navButtonVPad $pad;
+		margin: $navButtonVSpace 2px;
+		border: 1px solid transparent; // reserve space for :hover
+		border-radius: ($borderRadius * 0.8);
+	}
+
+	.current a,
+	.current a:hover { // if "current" goes nowhere
+		color: white;
+		background-color: $altUiBg;
+		border-color: $altUiBorder;
+		box-shadow: $altUiShadow;
+		background-image: linear-gradient(to top, $altUiShineLow 50%, $altUiShineHigh);
+	}
+
+	a:hover,
+	.current a[href]:hover { // if "current" links to an ancestor
+		text-decoration: none;
+		background-color: $linkHighlight;
+		border-color: $link;
+		color: black;
+		// bezel and shine
+		box-shadow: inset 0 0 2px rgba(white, 0.75);
+		background-image: linear-gradient(to top, rgba(white, 0), rgba(white, 0.75) 80%);
+	}
+
+	.current a[href]:hover {
+		border-color: $altUiBorder;
+	}
+
+	li:last-child { // search form
+		margin-left: auto;
+		align-self: stretch;
+		display: flex;
+		align-items: center;
+		padding: $pad;
+		background-color: $altUiBg;
+		border-left: 1px solid $altUiBorder;
+		box-shadow: $altUiShadow;
+		background-image: linear-gradient(to top, $altUiShineLow 50%, $altUiShineHigh);
+
+		button {
+			display: none;
+		}
+	}
+
+	//////////////////////////////////////////
+	// fallbacks for missing flexbox support
+	clear: left;
+
+	> ul > li {
+		display: inline-block;
+	}
+
+	li:last-child {
+		float: right;
+		min-height: (1em * $rootLineHeight);
+		padding-top: ($navButtonVSpace + $navButtonVPad);
+		padding-bottom: ($navButtonVSpace + $navButtonVPad);
+	}
+}

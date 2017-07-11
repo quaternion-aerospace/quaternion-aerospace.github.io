@@ -1,0 +1,24 @@
+.siteHead {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.125rem;
+	margin-bottom: $pad;
+	margin-top: -$pad;
+
+	> * {
+		margin-top: $pad;
+	}
+
+	> h1 {
+		margin: $pad $pad 0 0;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+}
+
+// siteNav is the last child of .siteHead
+@import 'layout/siteNav';
