@@ -5,8 +5,6 @@
       page: uav/qt1.html
     - label: Quadroter
       page: uav/qt2.html
-    - label: Autopilots
-      page: uav/autopilots.html
     - label: Ground Control Stations
       page: uav/ground-control-stations.html
     - label: Custom Platforms
