@@ -15,7 +15,7 @@
   hasMatch:
     - software/
     - uav/
-- label: Company
+- label: People
   page: company.html
   hasExact:
     - history.html
