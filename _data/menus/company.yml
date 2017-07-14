@@ -5,10 +5,10 @@
   submenu:
     - label: President and CEO
       page: team/suleman.html
-    - label: Airframes and Payload
-      page: team/flagg.html
-    - label: Intern
-      page: team/lu.html
+    - label: Chief Information Officer
+      page: team/hadian.html
+    - label: Mechanical Lead
+      page: team/brussow.html
     - label: Project Manager
       page: team/alber.html
     - label: Technologist
@@ -17,7 +17,3 @@
       page: team/cockroft.html
     - label: Instrumentation Lead
       page: team/warwick.html
-    - label: Mechanical Lead
-      page: team/brussow.html
-    - label: Chief Information Officer
-      page: team/hadian.html
