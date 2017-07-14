@@ -10,7 +10,7 @@
     - consulting.html
   hasMatch:
     - services
-- label: Fleet
+- label: Products
   page: fleet.html
   hasMatch:
     - software/
