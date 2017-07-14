@@ -1,6 +1,6 @@
 - label: Home
   page: index.html
-- label: Services
+- label: R&D
   page: services.html
   hasExact:
     - build.html
