@@ -14,5 +14,3 @@
   submenu:
     - label: MDO Tool
       page: software/mdo.html
-    - label: Telemetry Viewer
-      page: software/telemetry-viewer.html
