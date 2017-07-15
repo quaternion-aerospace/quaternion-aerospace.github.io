@@ -29,5 +29,10 @@
 			z-index: 2; // above other gallery items
 			transform: scale(1.1);
 		}
+
+		&.lightbox_showing:hover {
+			outline: none;
+			transform: scale(1);
+		}
 	}
 }

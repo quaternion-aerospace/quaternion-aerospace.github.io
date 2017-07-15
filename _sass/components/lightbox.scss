@@ -1,0 +1,122 @@
+// expected structure:
+// .lightbox
+//   .lightbox_prev
+//   .lightbox_next
+//   .lightbox_exit
+//   .lightbox_slide *
+//     img +
+//   .lightbox_slide.current
+//     img +
+//   .lightbox_slide *
+//     img +
+
+@keyframes lightbox-fadein {
+	from { background-color: rgba(black, 0); }
+	to { background-color: rgba(black, 0.8); }
+}
+
+@keyframes lightbox-control-fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// fade-out transition when closing lightbox
+	transition: opacity 0.3s ease;
+	// fade-in animation when opening lightbox
+	animation: 1s ease both lightbox-fadein;
+}
+
+.lightbox_prev,
+.lightbox_next,
+.lightbox_exit {
+	position: fixed;
+	z-index: 2; // > .lightbox_slide
+	color: white;
+	text-shadow: 0 0 4px black;
+	// fade-in animation when opening lightbox
+	animation: 1s ease both lightbox-control-fadein;
+	// override default <button> styling
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.lightbox_prev,
+.lightbox_next {
+	// vertically center
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 70px; // approximately fill pad area around slide images
+	font-weight: 200; // balance nicely with .lightbox_exit glyph
+	padding: 0;
+	// oversize the hit area
+	height: 2em; // note: <button> automatically vertically centers
+	width: 1em;
+}
+
+.lightbox_prev {
+	left: 0;
+	text-align: left;
+}
+
+.lightbox_next {
+	right: 0;
+	text-align: right;
+}
+
+.lightbox_exit {
+	top: 0;
+	right: 0;
+	font-size: 30px; // aproximately fit pad area around slide images
+	line-height: 1; // reduce head room
+	padding: 3px 3px 20px 20px; // oversize hit area a bit
+}
+
+.lightbox_slide {
+	position: fixed;
+	z-index: 1; // < lightbox controls (eg .lightbox_prev)
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	right: 100%; // hide off-screen to left
+	transition: right 0.3s ease;
+
+	> img {
+		position: absolute;
+		// vertically and horizontally center
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		// fill screen, but pad 30px around all edges
+		max-width: 100%; // fallback for dumber browsers
+		max-width: calc(100vw - 60px);
+		max-height: 100%; // fallback for dumber browsers
+		max-height: calc(100vh - 60px);
+
+		@at-root {
+			.lightbox.constrainWidth img {
+				width: 100vw;
+				height: auto;
+			}
+
+			.lightbox.constrainHeight img {
+				height: 100vh;
+				width: auto;
+			}
+		}
+	}
+
+	&.current ~ .lightbox_slide {
+		right: -100%; // hide off-screen to right
+	}
+
+	&.current {
+		right: 0; // visible!
+	}
+}
