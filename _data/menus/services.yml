@@ -1,7 +1,7 @@
-- label: Build
-  page: build.html
 - label: Design
   page: design.html
+- label: Build
+  page: build.html
 - label: Test
   page: test.html
 - label: Fly
