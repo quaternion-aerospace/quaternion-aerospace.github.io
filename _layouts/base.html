@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% if page.title %}{{page.title |xml_escape}} – {% endif %}Quaternion Aerospace</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" href="/css/base.css"/>{% if page.gallery %}
+	<link rel="stylesheet" href="/css/gallery.css"/>{% endif %}{% if page.stylesheet %}
+	<link rel="stylesheet" href="/css/{{page.stylesheet |uri_escape |xml_escape}}.css"/>{% endif %}
+</head>
+<body class="nojs">
+<script>document.body.className = "js";</script>
+<header class="siteHead">
+	<h1>
+		<a href="/">
+			<img src="/images/logo.png" alt="Quaternion Aerospace"/>
+		</a>
+	</h1>
+	<address>
+		<dl class="compact">
+			<dt class="icon-phone replace">Phone</dt>
+			<dd><a href="tel:17783513647">+1-778-351-3647</a></dd>
+		</dl>
+		<dl class="compact">
+			<dt class="icon-email replace">Email</dt>
+			<dd><a href="mailto:contact@quaternionaerospace.com">contact@quaternionaerospace.com</a></dd>
+		</dl>
+	</address>
+	<nav class="siteNav">
+		<ul>
+			{% include menu_items.html menu=site.data.menus.global indent="			" %}
+			<li>
+				<form action="/search/">
+					<input type="search" name="q" placeholder="search…"/>
+					<button type="submit">Search</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+{{content}}
+
+<footer class="siteFoot">
+	<p>Copyright &copy; 2017 Quaternion Aerospace</p>
+</footer>
+
+</body>
+</html>
