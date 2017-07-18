@@ -1,0 +1,10 @@
+{% for item in include.data %}
+	{% capture article %}
+	<span class="link date">{{item.date}}:</span> {{item.headline}}
+	{% endcapture %}
+	{% if item.link %}
+	<li><a class="defer" href="{{item.link}}">{{ article }}</a></li>
+	{% else %}
+	<li>{{ article }}</li>
+	{% endif %}
+{% endfor %}

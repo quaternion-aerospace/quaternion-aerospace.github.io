@@ -1,7 +1,21 @@
 ---
+layout: base
+stylesheet: splash
 ---
-hello world!
-<p>Design</p>
-<p>Build</p>
-<p>Test</p>
-<p>Fly</p>
+<div class="columns">
+	<section class="news">
+		<h2>Recent News</h2>
+		<ul>
+		{% include news.html data=site.data.news.news %}
+		</ul>
+		{% if site.data.news.archive %}
+			<a class="more" href="oldnews/">Older items…</a>
+		{% endif %}
+	</section>
+	<section class="news">
+		<h2>Upcoming Events</h2>
+		<ul>
+		{% include news.html data=site.data.news.upcoming %}
+		</ul>
+	</section>
+</div>
