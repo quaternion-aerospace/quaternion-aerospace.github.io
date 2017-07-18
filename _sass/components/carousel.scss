@@ -1,0 +1,126 @@
+@import 'globals';
+
+@keyframes slide-from-left {
+	from { right: 70%; }
+	to { right: 0; }
+}
+
+.js .carousel {
+	position: relative;
+	margin: $pad;
+	border: 1px solid $uiBorder;
+	border-radius: $borderRadius;
+	overflow: hidden;
+
+	details {
+		margin: 0;
+		padding: 0;
+	}
+
+	summary {
+		position: relative;
+		z-index: 3;
+		margin: 0;
+		padding: $pad;
+		box-sizing: border-box;
+		width: 30%;
+		border-right: 1px solid $uiBorder;
+		border-bottom: 1px solid $uiBorder;
+		background-color: $uiBg;
+		background-image: linear-gradient(to top, rgba(white, 0) 50%, rgba(white, 1));
+
+		// remove disclosure triangle
+		display: block;
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&:focus {
+			// replace outline with inner shadow so it doesn't get clipped
+			outline: none;
+			box-shadow: inset 0 0 0 2px $link;
+		}
+
+		&.current:focus {
+			box-shadow: inset 0 0 0 2px white;
+		}
+
+		&:hover::after,
+		&:focus::after,
+		&.current::after {
+			position: absolute;
+			right: $pad;
+			color: $link;
+			content: "❯";
+		}
+
+		&.current {
+			background-color: $link;
+			background-image: linear-gradient(to bottom, $linkHighlight, $link 50%);
+			border-color: $link;
+			color: white;
+
+			&::after {
+				color: white;
+			}
+		}
+	}
+
+	details:last-of-type summary {
+		border-bottom: none;
+	}
+
+	$slideDuration: 0.5s;
+
+	img, a {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		transition: opacity $slideDuration ease;
+		opacity: 0;
+		will-change: opacity;
+	}
+
+	.current ~ img,
+	.current ~ a {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	img {
+		width: 70%;
+		height: 100%;
+		left: auto;
+		object-fit: cover;
+	}
+
+	a {
+		display: block;
+		bottom: 0;
+		width: 30%;
+		min-width: 250px; // text we have will overflow with less than this
+		margin: $pad;
+		padding: $pad;
+		background: rgba($altUiBg, 0.9);
+		background: linear-gradient(
+			to bottom,
+			rgba($altUiShineHigh, 0.9),
+			rgba($altUiShineLow, 0.9) 20px,
+			rgba($altUiShineLow, 0.75)
+		);
+		border-radius: $borderRadius;
+		color: $uiShineLow;
+		text-shadow: 1px 1px 1px black;
+		border: 1px solid rgba($altUiBorder, 0.4);
+		box-shadow: $altUiShadow, 0 2px 5px rgba(black, 0.6);
+
+		&:hover {
+			color: $uiShineLow;
+		}
+	}
+
+	p {
+		margin-top: 0;
+	}
+}
