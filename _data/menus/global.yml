@@ -1,5 +1,7 @@
 - label: Home
   page: index.html
+  hasExact:
+    - oldnews.html
 - label: R&D
   page: services.html
   hasExact:
