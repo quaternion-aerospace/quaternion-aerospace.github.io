@@ -7,3 +7,22 @@ a {
 		color: $linkHighlight;
 	}
 }
+
+// "defer" link styling to an inner .link element while still remaining clickable
+.defer {
+	color: $defaultText;
+
+	&:hover {
+		text-decoration: none;
+		color: $defaultText;
+	}
+
+	.link {
+		color: $link;
+	}
+
+	&:hover .link {
+		text-decoration: underline;
+		color: $linkHighlight;
+	}
+}
