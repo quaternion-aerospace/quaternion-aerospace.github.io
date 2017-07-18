@@ -3,4 +3,5 @@
 	border-radius: $borderRadius;
 	padding: $pad;
 	margin: $pad 0;
+	overflow: hidden; // contain floats
 }
