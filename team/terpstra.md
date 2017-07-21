@@ -1,0 +1,11 @@
+---
+title: Sofat
+subMenu: company
+---
+**Maxwell Terpstra - Software**
+
+Maxwell brings over 10 years of practical experience in web development to the
+team. He received his Bachelor degree in computer science at the University of
+Victoria, and has been involved in projects at the university and surrounding
+community ever since. He is passionate about User Exerperience (UX) and building
+the right tool for the job.

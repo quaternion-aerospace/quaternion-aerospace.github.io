@@ -7,13 +7,21 @@
       page: team/suleman.html
     - label: Chief Information Officer
       page: team/hadian.html
-    - label: Mechanical Lead
+    - label: Flight Operations
+      page: team/richards.html
+    - label: Aerospace
+      page: team/braes.html
+    - label: Mechanical
       page: team/brussow.html
-    - label: Project Manager
-      page: team/alber.html
+    - label: Avionics
+      page: team/warwick.html
+    - label: Electrical
+      page: team/sherk.html
+    - label: Software
+      page: team/terpstra.html
     - label: Technologist
       page: team/raffaelli.html
     - label: CAD Designer
       page: team/cockroft.html
-    - label: Instrumentation Lead
-      page: team/warwick.html
+    - label: Project Manager
+      page: team/alber.html
