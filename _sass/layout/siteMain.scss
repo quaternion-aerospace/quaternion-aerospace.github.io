@@ -5,3 +5,8 @@
 	margin: $pad 0;
 	overflow: hidden; // contain floats
 }
+
+.float {
+	float: left;
+	margin: $pad;
+}
